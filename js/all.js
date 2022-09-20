@@ -605,6 +605,7 @@ $(document).ready(function () {
         (b = !0));
   }),
     $(".bigButton").on("click", showWork);
+
   var v = 4;
   $("#div4").css({ opacity: "1", "z-index": "3" }),
     $(".slideDir").on("click", function () {
@@ -637,7 +638,7 @@ $(document).ready(function () {
           }, 200);
       } else {
         var e = v;
-        (v = parseInt(v) + 1), 10 == v && (v = 1);
+        (v = parseInt(v) + 1), 11 == v && (v = 1);
         var o = $("#div" + e),
           s = $("#div" + v);
         $(".projects");

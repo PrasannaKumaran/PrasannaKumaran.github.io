@@ -568,7 +568,7 @@ $(document).ready(function () {
             currentDiv = parseInt(currentDiv) - 1;
 
             if(currentDiv == 0) {
-                currentDiv = 9;
+                currentDiv = 10;
             }
 
             var $lastUsed = $('#div' + lastDiv);
