@@ -611,7 +611,7 @@ $(document).ready(function () {
       var t = $(this).attr("id");
       if ("slideRight" == t) {
         var e = v;
-        (v = parseInt(v) - 1), 0 == v && (v = 7);
+        (v = parseInt(v) - 1), 0 == v && (v = 10);
         var o = $("#div" + e),
           s = $("#div" + v);
         $(".projects");
@@ -637,7 +637,7 @@ $(document).ready(function () {
           }, 200);
       } else {
         var e = v;
-        (v = parseInt(v) + 1), 7 == v && (v = 1);
+        (v = parseInt(v) + 1), 10 == v && (v = 1);
         var o = $("#div" + e),
           s = $("#div" + v);
         $(".projects");
