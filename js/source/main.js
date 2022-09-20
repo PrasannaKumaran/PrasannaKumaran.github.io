@@ -567,7 +567,7 @@ $(document).ready(function () {
 
       currentDiv = parseInt(currentDiv) - 1;
 
-      if (currentDiv == 0) {
+      if (currentDiv == 1) {
         currentDiv = 10;
       }
 
