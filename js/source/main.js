@@ -557,76 +557,59 @@ $(document).ready(function () {
   }
 
   //Slide divs in project section
-  var currentDiv = 5;
-  $("#div10").css({ opacity: "1", "z-index": "3" });
-  $(".slideDir").on("click", function () {
-    var dir = $(this).attr("id");
+  var currentDiv = 4;
+    $('#div4').css({'opacity': '1', 'z-index': '3'});
+    $(".slideDir").on('click', function(){
+        var dir = $(this).attr("id");
 
-    if (dir == "slideRight") {
-      var lastDiv = currentDiv;
+        if(dir == "slideRight") {
+            var lastDiv = currentDiv;
 
-      currentDiv = parseInt(currentDiv) - 1;
+            currentDiv = parseInt(currentDiv) - 1;
 
-      if (currentDiv == 0) {
-        currentDiv = 10;
-      }
-
-      var $lastUsed = $("#div" + lastDiv);
-      var $this = $("#div" + currentDiv);
-      var $container = $(".projects");
-      $lastUsed.css({ opacity: "0", "z-index": "-1" });
-      $lastUsed
-        .bind(
-          "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-          function () {
-            $(this).removeClass("slideOutBottom");
-          }
-        )
-        .addClass("slideOutBottom");
-      setTimeout(function () {
-        $this
-          .bind(
-            "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-            function () {
-              $(this).removeClass("slideInFromLeft");
+            if(currentDiv == 0) {
+                currentDiv = 10;
             }
-          )
-          .addClass("slideInFromLeft");
-        $this.css({ opacity: "1", "z-index": "3" });
-      }, 200);
-    } else {
-      var lastDiv = currentDiv;
-      currentDiv = parseInt(currentDiv) + 1;
-      if (currentDiv == 10) {
-        currentDiv = 1;
-      }
 
-      var $lastUsed = $("#div" + lastDiv);
-      var $this = $("#div" + currentDiv);
-      var $container = $(".projects");
+            var $lastUsed = $('#div' + lastDiv);
+            var $this = $('#div' + currentDiv);
+            var $container = $('.projects');
+            $lastUsed.css({'opacity': '0', 'z-index': '-1'});
+            $lastUsed.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $(this).removeClass("slideOutBottom");
+            }).addClass("slideOutBottom");
+            setTimeout(function(){
+                $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                    $(this).removeClass("slideInFromLeft");
+                }).addClass("slideInFromLeft");
+                $this.css({'opacity': '1', 'z-index': '3'});
+            },200);
 
-      $lastUsed.css({ opacity: "0", "z-index": "-1" });
-      $lastUsed
-        .bind(
-          "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-          function () {
-            $(this).removeClass("slideOutLeft");
-          }
-        )
-        .addClass("slideOutLeft");
-      setTimeout(function () {
-        $this
-          .bind(
-            "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-            function () {
-              $(this).removeClass("slideInFromBottom");
+        }else{
+            var lastDiv = currentDiv;
+            currentDiv = parseInt(currentDiv) + 1;
+            if (currentDiv == 11){
+                currentDiv = 1;
             }
-          )
-          .addClass("slideInFromBottom");
-        $this.css({ opacity: "1", "z-index": "3" });
-      }, 200);
-    }
-  });
+
+            var $lastUsed = $('#div' + lastDiv);
+            var $this = $('#div' + currentDiv);
+            var $container = $('.projects');
+
+            $lastUsed.css({'opacity': '0', 'z-index': '-1'});
+            $lastUsed.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $(this).removeClass("slideOutLeft");
+            }).addClass("slideOutLeft");
+            setTimeout(function(){
+                $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                    $(this).removeClass("slideInFromBottom");
+                }).addClass("slideInFromBottom");
+                $this.css({'opacity': '1', 'z-index': '3'});
+            },200);
+
+        }
+
+    });
 
   $("#projImages a").hover(
     function () {
