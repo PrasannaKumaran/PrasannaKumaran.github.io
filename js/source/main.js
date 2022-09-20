@@ -557,7 +557,7 @@ $(document).ready(function () {
   }
 
   //Slide divs in project section
-  var currentDiv = 7;
+  var currentDiv = 1;
   $("#div7").css({ opacity: "1", "z-index": "3" });
   $(".slideDir").on("click", function () {
     var dir = $(this).attr("id");
@@ -568,7 +568,7 @@ $(document).ready(function () {
       currentDiv = parseInt(currentDiv) - 1;
 
       if (currentDiv == 0) {
-        currentDiv = 8;
+        currentDiv = 11;
       }
 
       var $lastUsed = $("#div" + lastDiv);
@@ -597,7 +597,7 @@ $(document).ready(function () {
     } else {
       var lastDiv = currentDiv;
       currentDiv = parseInt(currentDiv) + 1;
-      if (currentDiv == 8) {
+      if (currentDiv == 11) {
         currentDiv = 1;
       }
 
