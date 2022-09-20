@@ -548,17 +548,17 @@ $(document).ready(function () {
     //         height = $elem.height();
     //     }
     // }
-    var biggestHeight = $("#div7").height();
+    var biggestHeight = $("#div10").height();
     var offsetFromHeader =
       $("#projectHeader").position().top + $("#projectHeader").height();
 
     // return height + offsetFromHeader + 190;
-    return biggestHeight + offsetFromHeader + 170;
+    return biggestHeight + offsetFromHeader + 190;
   }
 
   //Slide divs in project section
   var currentDiv = 1;
-  $("#div7").css({ opacity: "1", "z-index": "3" });
+  $("#div10").css({ opacity: "1", "z-index": "3" });
   $(".slideDir").on("click", function () {
     var dir = $(this).attr("id");
 
