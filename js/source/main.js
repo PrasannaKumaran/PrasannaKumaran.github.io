@@ -557,7 +557,7 @@ $(document).ready(function () {
   }
 
   //Slide divs in project section
-  var currentDiv = 1;
+  var currentDiv = 10;
     $('#div4').css({'opacity': '1', 'z-index': '3'});
     $(".slideDir").on('click', function(){
         var dir = $(this).attr("id");
