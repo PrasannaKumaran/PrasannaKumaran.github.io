@@ -2,7 +2,7 @@ function showWork() {
   $("#contact").hide();
   var t = "." + $(this).children(".workButton").children("a").data("target");
   $("#popDownWrapper").css({
-    height: $(".solarillion").outerHeight() + 180 + "px",
+    height: $(".solarillion").outerHeight() + 500 + "px",
   }),
     isShowing && t != lastUsed
       ? ($(lastUsed).css({ opacity: "0", "z-index": "-1" }),
@@ -606,13 +606,13 @@ $(document).ready(function () {
   }),
     $(".bigButton").on("click", showWork);
 
-  var v = 4;
-  $("#div4").css({ opacity: "1", "z-index": "3" }),
+  var v = 14;
+  $("#div14").css({ opacity: "1", "z-index": "3" }),
     $(".slideDir").on("click", function () {
       var t = $(this).attr("id");
       if ("slideRight" == t) {
         var e = v;
-        (v = parseInt(v) - 1), 0 == v && (v = 10);
+        (v = parseInt(v) - 1), 0 == v && (v = 16);
         var o = $("#div" + e),
           s = $("#div" + v);
         $(".projects");
@@ -638,7 +638,7 @@ $(document).ready(function () {
           }, 200);
       } else {
         var e = v;
-        (v = parseInt(v) + 1), 11 == v && (v = 1);
+        (v = parseInt(v) + 1), 16 == v && (v = 1);
         var o = $("#div" + e),
           s = $("#div" + v);
         $(".projects");

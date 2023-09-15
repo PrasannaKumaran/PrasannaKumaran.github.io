@@ -790,7 +790,7 @@ function showWork() {
   var _this =
     "." + $(this).children(".workButton").children("a").data("target");
   $("#popDownWrapper").css({
-    height: $(".solarillion").outerHeight() + 180 + "px",
+    height: $(".solarillion").outerHeight() +  $(".ucsd").outerHeight() + "px",
   });
   if (isShowing && _this != lastUsed) {
     $(lastUsed).css({ opacity: "0", "z-index": "-1" });
